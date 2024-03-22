@@ -8,7 +8,7 @@ B) O código avalia a expressão booleana, imprime o resultado true, calcula a s
 
 ---
 
-**2)**
+**2)**  Analise as funções calcularOrcamento() e calcularOrcamento2(). Num cenário em que a lista gastos fosse incializada como var gastos = [3600, 950, 620, 38] em ambas funções.
 
 Resposta: Letra B
 
@@ -63,7 +63,7 @@ B) Simular interações físicas realistas, como colisões e movimentos, em jogo
 
 Pseudocódigo:
 
-´´´
+```
 Cria a variável
 idade <- pedir pro Usuario("Digite a sua idade:")
 
@@ -72,8 +72,8 @@ então escrever("Você não pode votar.")
 senão se idade >= 16 E idade < 18
 então escrever("O seu voto é facultativo.")
 senão
-escrever("O seu voto é obrigatório.")
-´´´
+    escrever("O seu voto é obrigatório.")
+```
 
 ---
 
