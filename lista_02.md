@@ -159,6 +159,8 @@ fecha-Se
 
 **10)**
 
+Pseudocódigo:
+
 ```
 function MultiplicacaoDeMatrizes(matrizA, matrizB) {
   var linhasA = matrizA.length;
