@@ -63,7 +63,7 @@ B) Simular interações físicas realistas, como colisões e movimentos, em jogo
 
 Pseudocódigo:
 
-´´´
+```
 Cria a variável
 idade <- pedir pro Usuario("Digite a sua idade:")
 
@@ -73,7 +73,7 @@ senão se idade >= 16 E idade < 18
     então escrever("O seu voto é facultativo.")
 senão
     escrever("O seu voto é obrigatório.")
-´´´
+```
 
 ---
 
