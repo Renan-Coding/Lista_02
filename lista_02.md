@@ -8,7 +8,7 @@ B) O código avalia a expressão booleana, imprime o resultado true, calcula a s
 
 ---
 
-**2)** 
+**2)**
 
 Resposta: Letra B
 
@@ -67,12 +67,12 @@ Pseudocódigo:
 Cria a variável
 idade <- pedir pro Usuario("Digite a sua idade:")
 
-se idade < 16 
-    então escrever("Você não pode votar.")
-senão se idade >= 16 E idade < 18 
-    então escrever("O seu voto é facultativo.")
+se idade < 16
+então escrever("Você não pode votar.")
+senão se idade >= 16 E idade < 18
+então escrever("O seu voto é facultativo.")
 senão
-    escrever("O seu voto é obrigatório.")
+escrever("O seu voto é obrigatório.")
 ´´´
 
 ---
@@ -82,44 +82,42 @@ senão
 Pseudocódigo:
 
 ```
-classe formaGeometrica {
-  Método construtor(cor) {
+classe formaGeometrica
+  Método construtor(cor)
     - cor
-  }
 
-  Método calcularArea() {
+
+  Método calcularArea
     retornar 0
-  }
-}
 
-classe Retangulo estende formaGeometrica {
-  Método construtor(cor, b, h) {
+
+classe Retangulo estende formaGeometrica
+  Método construtor(cor, b, h)
     chamar o construtor de formaGeometrica passando o atributo (cor)
     - base
     - altura
-  }
 
-  Método calcularArea() {
+
+  Método calcularArea
     retornar base * altura
-  }
-}
 
-classe Circulo estende formaGeometrica {
-  Método construtor(cor, r) {
+
+classe Circulo estende formaGeometrica
+  Método construtor(cor, r)
     chamar o construtor de formaGeometrica passando o atributo (cor)
     - raio
-  }
 
-  Método calcularArea() {
+
+  Método calcularArea
     retornar π * raio elevado ao quadrado
-  }
-}
+
+
 
 retangulo = novo Retangulo("Azul", 5, 8)
-Imprimir(retangulo.cor, "|", retangulo.calcularArea())
+Imprimir "retangulo.cor, "|", retangulo.calcularArea"
 
-circulo = novo Circulo("Rosa", 3)
-Imprimir(circulo.cor, "|", (circulo.calcularArea()).arredonda para 4 casas decimais)
+circulo = novo Circulo ("Rosa, 3")
+Imprimir "circulo.cor, "|", circulo.calcularArea, arredonda para 4 casas decimais"
 ```
 
 ---
