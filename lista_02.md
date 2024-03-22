@@ -8,7 +8,7 @@ B) O código avalia a expressão booleana, imprime o resultado true, calcula a s
 
 ---
 
-**2)** 
+**2)**  Analise as funções calcularOrcamento() e calcularOrcamento2(). Num cenário em que a lista gastos fosse incializada como var gastos = [3600, 950, 620, 38] em ambas funções.
 
 Resposta: Letra B
 
