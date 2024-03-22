@@ -159,47 +159,61 @@ fecha-Se
 
 **10)**
 
+Pseudocódigo:
+
 ```
-function MultiplicacaoDeMatrizes(matrizA, matrizB) {
-  var linhasA = matrizA.length;
-  var colunasA = matrizA[0].length;
-  var linhasB = matrizB.length;
-  var colunasB = matrizB[0].length;
+função MultiplicacaoDeMatrizes(matrizA, matrizB)
 
-  if (colunasA !== linhasB) {
-    return "As matrizes não podem ser multiplicadas. O número de colunas da matrizA não é igual ao número de linhas da matrizB.";
-  }
+// Cria as variáveis, de acordo com o tamanho das matrizes
+var linhasA = matrizA.numero_de_linhas;
+var colunasA = matrizA.numero_de_colunas;
+var linhasB = matrizB.numero_de_linhas;
+var colunasB = matrizB.numero_de_colunas;
 
-  var matrizResultado = [];
-  for (let x = 0; x < linhasA; x++) {
-    var linha = [];
-    for (let y = 0; y < colunasB; y++) {
-      var soma = 0;
-      for (let z = 0; z < colunasA; z++) {
-        soma += matrizA[x][z] * matrizB[z][y];
-      }
-      linha.push(soma);
-    }
-    matrizResultado.push(linha);
-  }
+// Verifica se as matrizes podem ser multiplicadas
+Se colunasA for diferente de linhasB, Então
+  retorne "As matrizes não podem ser multiplicadas. O número de colunas da matrizA não é igual ao número de linhas da matrizB.";
+Fim-Se
 
-  return matrizResultado;
-}
-var matrizA = [
+  variável matrizResultado = vazio;
+        // Loop pelas linhas da matrizA
+        Para cada linhaA em matrizA Faça
+        linha = []
+
+        Para cada colunaB na transposta da matrizB Faça
+            soma = 0
+
+            //    Realiza a multiplicação e soma
+            Para i de 0 até o tamanho(linhaA) Faça
+                soma = soma + linhaA[i] * colunaB[i]
+            Fim-Para
+
+            Adiciona na lista linha(soma)
+        Fim Para
+
+        Adiciona na lista matrizResultado(linha)
+    Fim Para
+
+    Retorne matrizResultado
+Fim Função
+
+// Cria exemplo de multiplicação de matriz:
+variável matrizA -> [
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9],
-];
-var matrizB = [
-    [9, 8, 7],
-    [6, 5, 4],
-    [3, 2, 1],
-];
+]
 
-var matrizProduto = MultiplicacaoDeMatrizes(matrizA, matrizB);
-console.log("Resultado da multiplicação das matrizes:");
-for (let i = 0; i < matrizProduto.length; i++) {
-    var linha = matrizProduto[i];
-    console.log(linha);
-}
+var matrizB -> [
+  [9, 8, 7],
+  [6, 5, 4],
+  [3, 2, 1],
+]
+
+variável matrizProduto = multiplicacaoDeMatrizes entre matrizA e matrizB
+Imprime resultado da multiplicação das matrizes
+Para cada linha em matrizProduto Faça
+     variável linha = matrizProduto de i
+     Imprime (linha)
+Fim-Para
 ```

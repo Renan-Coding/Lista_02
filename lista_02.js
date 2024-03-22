@@ -100,56 +100,47 @@
 
 // Questão 7
 
-// var idade = prompt("Digite a sua idade:");
+// Cria a variável
+// idade <- pedir pro Usuario("Digite a sua idade:")
 
-// if (idade < 16) {
-//   console.log("Você não pode votar.");
-// } else if (idade >= 16 && idade < 18) {
-//   console.log("O seu voto é facultativo.");
-// } else {
-//   console.log("O seu voto é obrigatório.");
-// }
+// se idade < 16
+// então escrever("Você não pode votar.")
+// senão se idade >= 16 E idade < 18
+// então escrever("O seu voto é facultativo.")
+// senão
+//     escrever("O seu voto é obrigatório.")
 
 // Questão 8
 
-// class formaGeometrica {
-//   constructor(cor) {
-//     this.cor = cor;
-//   }
+// classe formaGeometrica
+//   Método construtor(cor)
+//     - cor
 
-//   calcularArea() {
-//     return 0;
-//   }
-// }
+//   Método calcularArea
+//     retornar 0
 
-// class Retangulo extends formaGeometrica {
-//   constructor(cor, b, h) {
-//     super(cor);
-//     this.b = b;
-//     this.h = h;
-//   }
+// classe Retangulo estende formaGeometrica
+//   Método construtor(cor, b, h)
+//     chamar o construtor de formaGeometrica passando o atributo (cor)
+//     - base
+//     - altura
 
-//   calcularArea() {
-//     return this.b * this.h;
-//   }
-// }
+//   Método calcularArea
+//     retornar base * altura
 
-// class Circulo extends formaGeometrica {
-//   constructor(cor, r) {
-//     super(cor);
-//     this.r = r;
-//   }
+// classe Circulo estende formaGeometrica
+//   Método construtor(cor, r)
+//     chamar o construtor de formaGeometrica passando o atributo (cor)
+//     - raio
 
-//   calcularArea() {
-//     return Math.PI * Math.pow(this.r, 2);
-//   }
-// }
+//   Método calcularArea
+//     retornar π * raio elevado ao quadrado
 
-// const retangulo = new Retangulo("Azul", 5, 8);
-// console.log(retangulo.cor,"|", retangulo.calcularArea());
+// retangulo = novo Retangulo("Azul", 5, 8)
+// Imprimir "retangulo.cor, "|", retangulo.calcularArea"
 
-// const circulo = new Circulo("Rosa", 3);
-// console.log(circulo.cor, "|", circulo.calcularArea().toFixed(4));
+// circulo = novo Circulo ("Rosa, 3")
+// Imprimir "circulo.cor, "|", circulo.calcularArea, arredonda para 4 casas decimais"
 
 // Questão 9
 
@@ -185,45 +176,60 @@
 
 // Questão 10
 
-// function MultiplicacaoDeMatrizes(matrizA, matrizB) {
-//   var linhasA = matrizA.length;
-//   var colunasA = matrizA[0].length;
-//   var linhasB = matrizB.length;
-//   var colunasB = matrizB[0].length;
+// Pseudocódigo:
 
-//   if (colunasA !== linhasB) {
-//     return "As matrizes não podem ser multiplicadas. O número de colunas da matrizA não é igual ao número de linhas da matrizB.";
-//   }
+// Cria-se a função multiplicacaoDeMatrizes, com os parâmetros matrizA e matrizB
+// função MultiplicacaoDeMatrizes(matrizA, matrizB)
 
-//   var matrizResultado = [];
-//   for (let x = 0; x < linhasA; x++) {
-//     var linha = [];
-//     for (let y = 0; y < colunasB; y++) {
-//       var soma = 0;
-//       for (let z = 0; z < colunasA; z++) {
-//         soma += matrizA[x][z] * matrizB[z][y];
-//       }
-//       linha.push(soma);
-//     }
-//     matrizResultado.push(linha);
-//   }
+// // Cria as variáveis, de acordo com o tamanho das matrizes
+// var linhasA = matrizA.numero_de_linhas;
+// var colunasA = matrizA.numero_de_colunas;
+// var linhasB = matrizB.numero_de_linhas;
+// var colunasB = matrizB.numero_de_colunas;
 
-//   return matrizResultado;
-// }
-// var matrizA = [
+// // Verifica se as matrizes podem ser multiplicadas
+// Se colunasA for diferente de linhasB, Então
+//   retorne "As matrizes não podem ser multiplicadas. O número de colunas da matrizA não é igual ao número de linhas da matrizB.";
+// Fim-Se
+
+//   variável matrizResultado = vazio;
+//         // Loop pelas linhas da matrizA
+//         Para cada linhaA em matrizA Faça
+//         linha = []
+
+//         Para cada colunaB na transposta da matrizB Faça
+//             soma = 0
+
+//             //    Realiza a multiplicação e soma
+//             Para i de 0 até o tamanho(linhaA) Faça
+//                 soma = soma + linhaA[i] * colunaB[i]
+//             Fim-Para
+
+//             Adiciona na lista linha(soma)
+//         Fim Para
+
+//         Adiciona na lista matrizResultado(linha)
+//     Fim Para
+
+//     Retorne matrizResultado
+// Fim Função
+
+// // Cria exemplo de multiplicação de matriz:
+// variável matrizA -> [
 //   [1, 2, 3],
 //   [4, 5, 6],
 //   [7, 8, 9],
-// ];
-// var matrizB = [
-//     [9, 8, 7],
-//     [6, 5, 4],
-//     [3, 2, 1],
-// ];
+// ]
 
-// var matrizProduto = MultiplicacaoDeMatrizes(matrizA, matrizB);
-// console.log("Resultado da multiplicação das matrizes:");
-// for (let i = 0; i < matrizProduto.length; i++) {
-//     var linha = matrizProduto[i];
-//     console.log(linha);
-// }
+// var matrizB -> [
+//   [9, 8, 7],
+//   [6, 5, 4],
+//   [3, 2, 1],
+// ]
+
+// variável matrizProduto = multiplicacaoDeMatrizes entre matrizA e matrizB
+// Imprime resultado da multiplicação das matrizes
+// Para cada linha em matrizProduto Faça
+//      variável linha = matrizProduto de i
+//      Imprime (linha)
+// Fim-Para
