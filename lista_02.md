@@ -116,7 +116,7 @@ classe Circulo estende formaGeometrica
 retangulo = novo Retangulo("Azul", 5, 8)
 Imprimir "retangulo.cor, "|", retangulo.calcularArea"
 
-circulo = novo Circulo ("Rosa, 3")
+circulo = novo Circulo ("Rosa", 3)
 Imprimir "circulo.cor, "|", circulo.calcularArea, arredonda para 4 casas decimais"
 ```
 
